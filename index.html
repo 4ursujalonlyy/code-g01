@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sirf Tumhare Liye ❤️ by sujal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffe5ef,#fff8fa);
+    overflow-x:hidden;
+}
+
+/* ================= PAGES ================= */
+
+.page{
+    min-height:100vh;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px 15px;
+}
+
+#page1{
+    display:flex;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    width:100%;
+    max-width:520px;
+    background:white;
+    padding:35px 25px;
+    border-radius:28px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.12);
+}
+
+h1{
+    color:#ff4f81;
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+h2{
+    color:#ff4f81;
+    font-size:27px;
+    margin-bottom:18px;
+}
+
+p{
+    color:#555;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+/* ================= BUTTON ================= */
+
+button{
+    border:none;
+    outline:none;
+    padding:13px 23px;
+    margin:6px;
+    border-radius:30px;
+    background:#ff5b88;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.06);
+    background:#ff3d73;
+}
+
+.no-btn{
+    background:#777;
+}
+
+/* ================= HEART ================= */
+
+.heart{
+    font-size:85px;
+    margin-bottom:15px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+
+}
+
+/* ================= GAME ================= */
+
+.game-box{
+    width:330px;
+    height:330px;
+    max-width:90vw;
+
+    margin:20px auto;
+
+    background:#fff5f8;
+
+    border:3px solid #ff8eaa;
+    border-radius:20px;
+
+    position:relative;
+    overflow:hidden;
+}
+
+#gameHeart{
+    position:absolute;
+
+    font-size:42px;
+
+    cursor:pointer;
+    user-select:none;
+
+    transition:0.15s;
+}
+
+.counter{
+    color:#ff4f81;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* ================= IMAGES ================= */
+
+.main-photo{
+    width:270px;
+    height:310px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin:10px auto 20px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,0.18);
+}
+
+.photos{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin:20px 0;
+}
+
+.photos img{
+    width:140px;
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ================= INPUT ================= */
+
+.name-input{
+    width:90%;
+    max-width:360px;
+
+    padding:14px 20px;
+
+    border:2px solid #ff9db8;
+
+    border-radius:30px;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:16px;
+
+    margin:10px 0;
+}
+
+/* ================= PERCENTAGE ================= */
+
+.percentage{
+    font-size:75px;
+
+    font-weight:bold;
+
+    color:#ff4f81;
+
+    margin:20px 0;
+
+    animation:beat 1s infinite;
+}
+
+.small{
+    color:#999;
+    font-size:14px;
+}
+
+/* ================= FINAL IMAGE ================= */
+
+#loveResultImage{
+    width:280px;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    margin:15px auto;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:500px){
+
+    h1{
+        font-size:26px;
+    }
+
+    h2{
+        font-size:23px;
+    }
+
+    .game-box{
+        width:290px;
+        height:290px;
+    }
+
+    .photos img{
+        width:115px;
+        height:145px;
+    }
+
+    .main-photo{
+        width:240px;
+        height:280px;
+    }
+
+    #loveResultImage{
+        width:240px;
+        height:270px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<div id="page1" class="page">
+
+<div class="card">
+
+    <div class="heart">💗</div>
+
+    <h1>
+        Did you lub mee? 💗
+    </h1>
+
+    <p>
+        Sach sach batana... 👀
+        <br>
+        Soch samajh ke bolnaa ni to..... 😌
+    </p>
+
+    <button onclick="openGame()">
+        yes i do 💕
+    </button>
+
+    <button
+        class="no-btn"
+        onclick="showPage('noPage')"
+    >
+        Nahi 😭
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     NO PAGE
+===================================================== -->
+
+<div id="noPage" class="page">
+
+<div class="card">
+
+    <img
+        src="nooption.jpg"
+        class="main-photo"
+        alt="Sad"
+    >
+
+    <h1>
+        Ek baar aur socho na babu 🥺
+    </h1>
+
+    <p>
+        Lagta hai tera answer galat hai... 😂💗
+    </p>
+
+    <button onclick="showPage('page1')">
+        Dobara Try Karo 💕
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     GAME PAGE
+===================================================== -->
+
+<div id="gamePage" class="page">
+
+<div class="card">
+
+    <h1>
+        ek chota game nibbi 🎮💗
+    </h1>
+
+    <p>
+        Heart ko 5 baar click krke dikha ! 💕
+    </p>
+
+    <div class="counter">
+
+        Heart :
+        <span id="tapCount">0</span>/5
+
+    </div>
+
+    <div
+        class="game-box"
+        id="gameBox"
+    >
+
+        <div
+            id="gameHeart"
+            onclick="catchHeart(event)"
+        >
+            💗
+        </div>
+
+    </div>
+
+    <p class="small">
+        Sirf heart ko touch/click karne par count hoga 👀
+    </p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FAIL PAGE
+===================================================== -->
+
+<div id="failPage" class="page">
+
+<div class="card">
+
+    <div class="heart">
+        😭
+    </div>
+
+    <h1>
+        Shayad... 😭
+    </h1>
+
+    <p>
+
+        Aapko mere pyaar ke usme
+        <br>
+        sach hai... 😭💗
+
+        <br><br>
+
+        Sach nahi hai to dubara try kro...
+        chalo! 😂
+
+    </p>
+
+    <button onclick="openGame()">
+        Ek Baar Aur Try Karo 🔄
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     PASS PAGE
+===================================================== -->
+
+<div id="passPage" class="page">
+
+<div class="card">
+
+    <div class="heart">
+        💖
+    </div>
+
+    <h1>
+        Kar Liya Tene noob! 🎉
+    </h1>
+
+    <p>
+        Ab tum ekdum close ho kisi special cheez ke... 👀
+    </p>
+
+    <p>
+        Ter liye kuch special wait kar raha hai. 💕
+    </p>
+
+    <button
+        onclick="showPage('favouritePage')"
+    >
+        edr daba ✨
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FAVOURITE PERSON
+===================================================== -->
+
+<div id="favouritePage" class="page">
+
+<div class="card">
+
+    <img
+        src="4.jpeg"
+        class="main-photo"
+        alt="My Favourite Person"
+    >
+
+    <h1>
+        Meri Favourite Person ❤️
+    </h1>
+
+    <p>
+        Tum yahan tak aa hi gayi... 🥹💗
+    </p>
+
+    <p>
+        Aur ye to bas surprise
+        ki shuruaat hai.
+    </p>
+
+    <button
+        onclick="showPage('specialPage')"
+    >
+        Sujalll Ki Special Surprise ✨
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SPECIAL SURPRISE
+===================================================== -->
+
+<div id="specialPage" class="page">
+
+<div class="card">
+
+    <h1>
+        Tumhare Liye Ek Special Surprise 💗
+    </h1>
+
+    <div class="photos">
+
+        <img
+            src="download (5).jpg"
+            alt="Photo 1"
+        >
+
+        <img
+            src="download (6).jpg"
+            alt="Photo 2"
+        >
+
+        <img
+            src="cartierrug.jpg"
+            alt="Photo 3"
+        >
+
+    </div>
+
+    <p>
+
+        Mujhe pata hai tu bahut pyaar karti h... 🥹❤️
+
+        <br>
+
+        Tabhi tu yahan tak aayi verna phle no kr deti...
+
+        <br>
+
+        aur mujhe es liy terko kuch kehna hh. 👀💗
+
+    </p>
+
+    <button
+        onclick="showPage('namePage')"
+    >
+        jaan na h to yaha daba noob? 👀
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     NAME REVEAL
+===================================================== -->
+
+<div id="namePage" class="page">
+
+<div class="card">
+
+    <div class="heart">
+        💗
+    </div>
+
+    <h1>
+        Sach me Janna Hai? 👀
+    </h1>
+
+    <p>
+        Achha... lekin pehle edr click dba. 😌
+    </p>
+
+    <button
+        onclick="showPage('lovePage')"
+    >
+        jldi bollllll 💕
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FINAL LOVE MESSAGE
+===================================================== -->
+
+<div id="lovePage" class="page">
+
+<div class="card">
+
+    <div class="heart">
+        ❤️
+    </div>
+
+    <h1>
+
+        I LOVE YOU
+
+        <br>
+
+        SHIVANIIIIII ❤️
+
+    </h1>
+
+    <p>
+        Tumhara Sujalll 🥹💗
+    </p>
+
+    <button
+        onclick="showPage('calculatorPage')"
+    >
+        wanna see Love Percentage amm hmm.... 💕
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     LOVE CALCULATOR
+===================================================== -->
+
+<div id="calculatorPage" class="page">
+
+<div class="card">
+
+    <div class="heart">
+        💖
+    </div>
+
+    <h1>
+        Bas Ek Last  💕
+    </h1>
+
+    <p>
+        dekhte kitna tera love hai merse  👀❤️
+    </p>
+
+    <input
+        type="text"
+        id="nameInput"
+        class="name-input"
+        placeholder="Apna naam likho..."
+        autocomplete="off"
+    >
+
+    <br>
+
+    <button onclick="calculateLove()">
+        love clculate ke liy edr daba ❤️
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     LOVE RESULT
+===================================================== -->
+
+<div id="resultPage" class="page">
+
+<div class="card">
+
+    <div class="heart">
+        💗
+    </div>
+
+    <h2 id="resultName">
+        Shivani ❤️ Sujal
+    </h2>
+
+
+    <!--
+        Ye image sirf 100% result par dikhegi
+    -->
+
+    <img
+        id="loveResultImage"
+        src="nibbi.jpg"
+        alt="Our Love ❤️"
+        style="display:none;"
+    >
+
+
+    <div
+        class="percentage"
+        id="lovePercentage"
+    >
+        100%
+    </div>
+
+
+    <p id="loveMessage">
+        Mujhe pehle se pata tha! 🥹❤️
+    </p>
+
+
+    <button
+        onclick="showPage('calculatorPage')"
+    >
+        chl bas etna he hhh auro ka naam mt daalio tu.... 🔄
+    </button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* =====================================================
+   PAGE CHANGE
+===================================================== */
+
+function showPage(pageId){
+
+    const pages =
+        document.querySelectorAll(".page");
+
+
+    pages.forEach(function(page){
+
+        page.style.display = "none";
+
+    });
+
+
+    document.getElementById(pageId).style.display = "flex";
+
+
+    window.scrollTo(0,0);
+
+}
+
+
+
+/* =====================================================
+   GAME VARIABLES
+===================================================== */
+
+let tapCount = 0;
+
+let gameStarted = false;
+
+let moveInterval;
+
+
+
+/* =====================================================
+   START GAME
+===================================================== */
+
+function openGame(){
+
+    showPage("gamePage");
+
+
+    tapCount = 0;
+
+
+    document.getElementById(
+        "tapCount"
+    ).innerText = "0";
+
+
+    gameStarted = true;
+
+
+    clearInterval(moveInterval);
+
+
+    moveHeart();
+
+
+    /*
+       Har 1 second me heart ki
+       position change hogi.
+    */
+
+    moveInterval = setInterval(
+
+        function(){
+
+            if(gameStarted){
+
+                moveHeart();
+
+            }
+
+        },
+
+        199
+
+    );
+
+}
+
+
+
+/* =====================================================
+   MOVE HEART
+===================================================== */
+
+function moveHeart(){
+
+    const box =
+        document.getElementById("gameBox");
+
+
+    const heart =
+        document.getElementById("gameHeart");
+
+
+    const maxX =
+        box.clientWidth -
+        heart.offsetWidth -
+        10;
+
+
+    const maxY =
+        box.clientHeight -
+        heart.offsetHeight -
+        10;
+
+
+    const x =
+        Math.floor(
+            Math.random() *
+            Math.max(maxX,1)
+        );
+
+
+    const y =
+        Math.floor(
+            Math.random() *
+            Math.max(maxY,1)
+        );
+
+
+    heart.style.left =
+        x + "px";
+
+
+    heart.style.top =
+        y + "px";
+
+}
+
+
+
+/* =====================================================
+   HEART CLICK
+===================================================== */
+
+function catchHeart(event){
+
+    /*
+       Sirf heart par click hone par
+       hi count hoga.
+    */
+
+    event.stopPropagation();
+
+
+    if(!gameStarted){
+
+        return;
+
+    }
+
+
+    tapCount++;
+
+
+    document.getElementById(
+        "tapCount"
+    ).innerText = tapCount;
+
+
+    /*
+       5 baar heart pakad liya
+       = Game pass
+    */
+
+    if(tapCount >= 5){
+
+        gameStarted = false;
+
+
+        clearInterval(moveInterval);
+
+
+        setTimeout(
+
+            function(){
+
+                showPage("passPage");
+
+            },
+
+            300
+
+        );
+
+
+        return;
+
+    }
+
+
+    /*
+       Heart ko turant dusri jagah bhejo
+    */
+
+    moveHeart();
+
+}
+
+
+
+/* =====================================================
+   LOVE PERCENTAGE
+===================================================== */
+
+function calculateLove(){
+
+    const input =
+        document.getElementById(
+            "nameInput"
+        ).value.trim();
+
+
+    /*
+       Agar naam nahi dala
+    */
+
+    if(input === ""){
+
+        alert(
+            "Pehle apna naam to likho ❤️"
+        );
+
+        return;
+
+    }
+
+
+    /*
+       Lowercase karne se
+       upper/lower/mixed case
+       sab accept honge.
+
+       Example:
+
+       Shivani
+       SHIVANI
+       shivani
+       sHiVaNi
+
+       Sab same hain.
+    */
+
+    const name =
+        input.toLowerCase();
+
+
+    let percentage;
+
+
+    /*
+       SHIVANI / SHIVI
+
+       Dono ka result hamesha 100%
+    */
+
+    if(
+        name === "shivani" ||
+        name === "shivi"
+    ){
+
+        percentage = 100;
+
+    }
+
+
+    /*
+       Baaki sab naam
+       1 se 49% ke beech
+    */
+
+    else{
+
+        percentage =
+            Math.floor(
+                Math.random() * 49
+            ) + 1;
+
+    }
+
+
+    /*
+       Naam show karo
+    */
+
+    document.getElementById(
+        "resultName"
+    ).innerText =
+        input + " ❤️ Sujal";
+
+
+    /*
+       Percentage show karo
+    */
+
+    document.getElementById(
+        "lovePercentage"
+    ).innerText =
+        percentage + "%";
+
+
+    /*
+       Final image
+    */
+
+    const resultImage =
+        document.getElementById(
+            "loveResultImage"
+        );
+
+
+    /*
+       AGAR 100%
+    */
+
+    if(percentage === 100){
+
+        /*
+           Image show hogi
+        */
+
+        resultImage.style.display =
+            "block";
+
+
+        document.getElementById(
+            "loveMessage"
+        ).innerText =
+            "Mujhe pehle se pata tha! Tum Sujal se sooo much pyaar karti ho! 🥹❤️💗";
+
+    }
+
+
+    /*
+       AGAR 50% SE KAM
+    */
+
+    else{
+
+        /*
+           Image hide rahegi
+        */
+
+        resultImage.style.display =
+            "none";
+
+
+        document.getElementById(
+            "loveMessage"
+        ).innerText =
+            "Areyyy... thoda aur pyaar chahiye! 😂💔";
+
+    }
+
+
+    /*
+       Result page open
+    */
+
+    showPage("resultPage");
+
+}
+
+
+
+/* =====================================================
+   ENTER KEY
+===================================================== */
+
+document.getElementById(
+    "nameInput"
+).addEventListener(
+
+    "keydown",
+
+    function(event){
+
+        if(event.key === "Enter"){
+
+            calculateLove();
+
+        }
+
+    }
+
+);
+
+</script>
+
+</body>
+</html>
